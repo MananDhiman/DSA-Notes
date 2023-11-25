@@ -21,3 +21,14 @@
 - Greedy: hope local optimum at each step, we get global optimum
 - Brute Force: Tries all possibilites
 - Randomised
+
+# How?
+Theory or concept
+Approach: Binary search, dp
+Time Complexity
+Edge Cases
+
+Actual code
+
+When learning new concept, write a note that includes a hard detailed example. May also include flowcharts of working
+
