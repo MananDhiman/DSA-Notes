@@ -12,6 +12,13 @@
 - Non Linear
   - Tree
   - Graph
+
+### Important Topics
+- Sliding Window, Two Pointer, Subset
+- BFS, DFS
+- Recursion -> Backtracking -> Dynamic Programming
+- Heap (Top K elements)
+- HashMap
   
   
 ### [Sub topics](https://www.geeksforgeeks.org/complete-roadmap-to-learn-dsa-from-scratch/)
