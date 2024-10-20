@@ -47,3 +47,9 @@ If 256 items:
 | Radix             | 0(nk)      | 0(n + k)    | Ω(nk)      |
 
 ![time-complexity-chart](https://github.com/MananDhiman/comp-sci-theory/assets/64782929/b225d69f-94c4-44f4-a12a-5d0e7f766dec)
+
+# Leetcode Hint
+n < 20 = 2 ^ n, n! (brute force / backtracking)
+n < 3k = n ^ 2  (dynamic programming)
+n < 10 ^ 6 = linear, n logn (2 pointer, greedy, heap , sorting)
+n > 10 ^ 6 = logn, constant (binary search, math)

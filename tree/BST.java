@@ -1,3 +1,4 @@
+// Max nodes at n level = 2 ^ n -1
 import java.util.*;
 
 public class BST{

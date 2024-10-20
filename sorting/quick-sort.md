@@ -1,42 +1,40 @@
 ```java
 class QuickSort {
-  static void swap(int[] arr, int a, int b) {
-    int temp = arr[a];
-    arr[a] = arr[b];
-    arr[b] = temp;
-  }
-  static int getPartIndex(int[] arr, int low, int high) {
-    int l = low, r = high;
-    int pivot = arr[low];
-
-    while(l < r) {
-      while(arr[l] <= pivot && l <= high-1) {
-        l++;
-      }
-
-      while(arr[r] > pivot && r >= low + 1) {
-        r--;
-      }
-      if(l < r) swap(arr, l, r);
+    static void swap(int[] arr, int a, int b) {
+        int temp = arr[a];
+        arr[a] = arr[b];
+        arr[b] = temp;
     }
-    swap(arr, low, r);
 
-    return r;
+public static void sort(int[] arr, int low, int high) {
+   if (low >= high) return;
 
-  }
-  static void mSort(int[] arr, int low, int high) {
-    if(low < high) {
-      int partIndex = getPartIndex(arr, low, high);
-      mSort(arr, low, partIndex - 1);
-      mSort(arr, partIndex + 1, high);
+   int l = low, r = high;
+   int pivot = arr[low];
+
+   while (l < r && l <= high && r >= low ) {
+       while (l < high && arr[l] <= pivot) 
+           l++;
+       while (r > low && arr[r] > pivot)
+           r--;
+
+       if (l < r)
+           swap(arr, l, r);
+   }
+
+   swap(arr, low, r);
+
+   sort(arr, low, l-1);
+   sort(arr, l, high);
+}
+
+    public static void main(String args[]) {
+        int[] arr = {5,4,3,2,1};
+
+        sort(arr, 0, arr.length-1);
+
+        for(int i: arr)
+            System.out.print(i + " ");
     }
-  }
-  public static void main(String args[]) {
-    int[] arr = {5,4,3,2,1};
-
-    mSort(arr, 0, arr.length-1);
-
-    for(int i: arr) System.out.print(i + " ");
-  }
 }
 ```
